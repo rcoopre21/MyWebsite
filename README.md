@@ -1,2 +1,2 @@
-# MyWebsite2
+# MyWebsite
 This is the code for my website. 
