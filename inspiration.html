@@ -2,10 +2,38 @@
 <html>
 <head>
 
+
+<body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Me</a>
+  <a href="inspiration.html">Inspiration</a>
+  <a href="future.html">The Future</a>
+</div> 
+	</body>
+</head>
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="Nav()">&#9776; </span>
+</div>
+
+<script>
+function Nav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  
+}
+</script>
  <title>REC Art</title>
 <link href="styles.css" rel="stylesheet" type="text/css">
 <div id="grad1"></div>
-	</head>
+
+
          <h2>My Inspiration</h2>
     <main>
 		<section id="section1"> </section>
@@ -15,6 +43,7 @@
 <p>Babs Tarr is a comic book artist who has worked on numerous things, such as the <i>Batgirl</i> comics. <br>
     She also draws for one of my current favorite comics, <i>Motor Crush</i>. </p>
          <img src="http://www.comicsthegathering.com/sites/default/files/styles/review_main_img_630_419/public/Motor%20Crush%20head.PNG?itok=q-NydOfR" alt="Motor Crush Banner by Babs Tarr" width="315" height="209.5">
+
          <img 
 src="https://cdn.newsday.com/polopoly_fs/1.10575658.1435163409!/httpImage/image.jpg_gen/derivatives/landscape_768/image.jpg" alt="Batgirl Banner by Babs Tarr" width="477.75" height="275.25">
         <h2>Christopher Burk</h2>

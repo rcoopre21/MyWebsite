@@ -1,8 +1,25 @@
 @charset "utf-8";
-
 body {
-    background-image: url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-color: mediumpurple;
 }
+
+@media only screen and (max-width : 1065px ){
+  body {
+    background-color: lightblue;
+  }
+@media screen {
+  body {
+    color: black; 
+  }
+}
+
+@media print {
+  body {
+    color: darkblue; 
+  }
+}
+}
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -10,7 +27,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #000000;
+    background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -20,7 +37,7 @@ body {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #FFFFFF;
+    color: #818181;
     display: block;
     transition: 0.3s;
 }
@@ -37,78 +54,36 @@ body {
     margin-left: 50px;
 }
 
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
-
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="index.html">Home</a>
-  <a href="about.html">About Me</a>
-  <a href="inspiration.html">Inspiration</a>
-  <a href="future.html">The Future</a>
-</div> 
-
-
-<div id="main">
-  <span style="font-size:30px;cursor:pointer" onclick="Nav()">&#9776; </span>
-</div>
-
-<script>
-function Nav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  -webkit-animation-name: example; 
+  -webkit-animation-duration: 4s; 
+  -webkit-animation-iteration-count: infinite;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-    document.body.style.backgroundColor = "BLACK";
-}
-@media screen and (min-width: 480px) {
-}
-.wrapper {overflow: auto;}
-
-#main {margin-left: 4px;}
-
-#leftsidebar {
-  float: none;
-  width: auto;
+@-webkit-keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
 }
 
-#menulist {
-  margin: 0;
-  padding: 0;
-}
 
-.menuitem {
-  background: #CDF0F6;
-  border: 1px solid #d4d4d4;
-  border-radius: 4px;
-  list-style-type: none;
-  margin: 4px;
-  padding: 2px;
-}
-
-@media screen and (min-width: 480px) {
-  #leftsidebar {width: 200px; float: left;}
-  #main {margin-left: 216px;}
-}
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
 }
