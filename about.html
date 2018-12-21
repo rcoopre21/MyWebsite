@@ -1,8 +1,50 @@
 <!DOCTYPE html>
-<html>
 <head>
-
-
+<style>
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffb6c1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="index.html">Home</a>
@@ -10,13 +52,24 @@
   <a href="inspiration.html">Inspiration</a>
   <a href="future.html">The Future</a>
 </div> 
-	</head>
+
 
 <div id="main">
   <span style="font-size:30px;cursor:pointer" onclick="Nav()">&#9776; </span>
 </div>
 
-
+<script>
+function Nav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  
+}
+</script>
    <link href="styles.css" rel="stylesheet" tyle="text/css">
          <h2>Who I Am</h2>
     <main>
@@ -48,11 +101,3 @@ design for summer art classes at CCAD, the college in downtown Columbus.</p>
   <li>Donnie Darko</li>
   <li>Heathers</li>
       </ol>
-
-		<p>Here are some pictures I've taken on trips, concerts, etc.</p>
-	
-   <img src="https://bn1305files.storage.live.com/y4m0ZHtSA01VskHWr90Zo1un5QsVzekzj9HeoQMn8YjrQUovqlNLyCp2iJcisyqgTSb1ow9dVhJpXORvc_v4wqxyn0cEBiXTdljVJBqXn9xG9slTfA0SGtQO__5l6OczP0b0wS-rsLVnxCbYy3DJsmOmkCBABGd74kFVQrLOPUZ3Z1WGaPRM_a8jVQw4lsypZIiB4TbX3wJNj465mOlYyWNBA/IMG_3051.JPG?psid=1&width=594&height=792" alt="Washington D.C. - Gardens" width="594" height="792">
-	<img src="https://bn1305files.storage.live.com/y4mTAZczJEXaLMwobieVcbb6HiEmituOkIYKLJDRKimH54DxVZuSD_0OANmjf5hb1Pjd377Rk2mssAtBIIzK59y8yFPDxzyzEnID7lR5Pxh1sDYOdwUUv_kbrbuYxEZAQhcfEhN-HCayhL6i_LGA_XFgUtRt13JecLRuaSNF2ZaeDj_V3Ayu46iLSAacMC6sbkElGutL617VDwn3virWcgF8A/IMG_4480.JPG?psid=1&width=594&height=792" alt="Twenty One Pilots Concert" width="594" height="792">
-	<img
-src="https://bn1305files.storage.live.com/y4mbpsB-VrQLCy5ukonAu98HN1JYCbga1tV7lf_hsY6hK-_ymQ7h2C_3xPWBX_tjNA2QMMoNDSVLDMBFce-hedflrk_javm8w6kUnQmYeFq5jF5LY90hKk644grX91MV3sTalvwxX3dKZ3a39iyWEtu-0jjHhMdOH1jvbADFiQcsrl18Tbi_zTupzwlGc7s25IYF1po8mWMjUzXrG9khHqSuQ/IMG_5394.JPG?psid=1&width=594&height=792" alt="Rainy" width="594" height="792">
-	</html>
