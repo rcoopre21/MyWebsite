@@ -68,10 +68,4 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-div {
-  transition: background-color 1s ease;
-  background-color: darkmagenta;
-}
-div:hover {
-  background-color: floralwhite;
-}
+
